@@ -1,0 +1,19 @@
+<header>
+    <nav>
+        <ul>
+
+
+            <li><a href="/user">Gabble</a></li>
+            <li><a href="/user/createGab">Create a new gab</a></li>
+
+            {{#if isAuthenticated}}
+                <li><a class="loggedInAs">Logged in as {{ username }}</a></li>
+                <li><a href="/logout">Log out</a></li>
+            {{else}}
+                <li><a href="/login">Log in</a></li>
+                <li><a href="/">Sign up</a></li>
+            {{/if}}
+
+        </ul>
+    </nav>
+</header>

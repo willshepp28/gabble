@@ -1,0 +1,57 @@
+<h1 class="main-header">Home</h1>
+
+
+<div class="container">
+
+
+{{#each messages}}
+
+    <div class="post">
+
+
+        <div class="right-post">
+            <h2>{{ User.username }}: <p>{{ message }}</p></h2>
+            <p>{{ dateCreated }}</p>
+            
+
+        {{!-- the total of all likes will be shown here  --}}
+           {{#if Likes.length}}
+           
+                <p><a href="/user/message/{{id}}">{{ Likes.length }}</a></p>
+                {{else}}
+                <p><a href="/user/message/{{id}}"> No likes yet</a></p>
+           {{/if}}
+        </div>
+
+
+{{!-- if the  button is pressed that is attachted to the message than like is turned to true  --}}
+        <div class="left-post">
+            <form action="/user/likes/{{id}}" method="post">
+                <button type="submit">Like</button>
+            </form>
+        </div>
+
+
+
+{{!-- if "Delete" button is pressed that is attachted to this mesage, then the message is deleted --}}
+{{#if User.id}}
+        <div class="left-post">
+            <form action="/user/message/{{id}}" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+
+{{else}}
+
+{{/if}}
+
+
+
+
+
+    </div>
+
+
+
+    {{/each}}
+</div>

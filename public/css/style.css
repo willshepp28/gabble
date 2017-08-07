@@ -1,0 +1,133 @@
+* { box-sizing: border-box; }
+
+
+/* =============================================================================
+  RESETS
+============================================================================= */
+
+html, body, ul, ol, li, form, fieldset, legend
+{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+
+fieldset,img { border: 0; }
+
+legend { color: #000; }
+
+li { list-style: none; }
+
+sup { vertical-align: text-top; }
+
+sub { vertical-align: text-bottom; }
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption, th, td
+{
+	text-align: left;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+input, textarea, select
+{
+	font-size: 110%;
+	line-height: 1.1;
+}
+
+abbr, acronym
+{
+	border-bottom: .1em dotted;
+	cursor: help;
+}
+
+
+
+
+
+/* =============================================================================
+  Global
+============================================================================= */
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+ 
+
+
+}
+
+body {
+  
+    display: flex;
+    
+    font-size: 70%;
+    flex-direction: column;
+    align-items: center;
+     background: #E6ECF0; 
+    /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-top: 2px solid #000000;
+  
+   
+}
+
+
+.container {
+    margin-top: 41px;
+    padding: 20px;
+  
+}
+
+
+a { color: black; }
+
+
+header { margin-top: 10px; }
+
+header nav ul { display: flex;}
+
+header nav li { margin-right: 5px; }
+
+
+
+button { border: 1px solid black ; }
+
+
+.loggedInAs { text-decoration: underline; }
+
+.main-header { text-align: center; }
+
+.post {
+    display: flex;
+    border-bottom: 2px solid black;
+    margin-bottom: 15px;
+}
+
+
+footer {   
+ 
+    order: 3;
+    width: 100%;
+  text-align: center;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%); 
+  color: white;
+}
+
+

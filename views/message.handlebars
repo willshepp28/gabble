@@ -1,0 +1,40 @@
+<h1 class="main-header">User Message</h1>
+
+
+<div class="container">
+
+
+
+
+    {{!-- {{#each messages}} --}}
+
+    <div class="post">
+
+
+        <div class="right-post">
+            <h2>{{ messages.User.username }}: <p>{{ messages.message}}</p></h2>
+            <p>{{ messages.dateCreated }}</p>
+        </div>
+
+
+    </div>
+    {{!-- {{/each}} --}}
+
+      <div class="liked-by">
+            <h1>Liked by</h1>
+
+            <div class="likes">
+
+                {{#if users}}  
+                {{!-- Displays the name of each user that liked this message  --}}
+                    {{#each users}}
+                        <p>{{username}}</p>
+                    {{/each}}
+                {{else}}
+                <p>No Likes Yet</p>
+                {{/if}}
+
+            </div>
+        </div>
+
+</div>
