@@ -42,14 +42,36 @@ router.get('/', async function (req, res) {
             ]
         });
 
-
+        // we have a id (message)
+        // we have a userId
 
     } catch (e) {
         console.log("No messages found");
         next();
     }
 
+ 
 
+    // if req.session.username === message[0].username;
+    console.log(messages[0].User.username);
+
+    var show = false;
+
+   for(let message of messages) {
+       if (message.User.username === req.session.username) {
+           message.canDelete = true;
+        
+       }
+   }
+
+    // for (let i = 0; i < messages.length; i++) {
+
+    //     if (messages[i].User.username === req.session.username) {
+    //         messages[i].canDelete = true;
+    //     }
+    // }
+    // var show = req.session.username === messages
+  
 
 
     res.render('home', { isAuthenticated: req.session.isAuthenticated, username: req.session.username, messages });

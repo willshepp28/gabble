@@ -29,22 +29,22 @@
             <form action="/user/likes/{{id}}" method="post">
                 <button type="submit">Like</button>
             </form>
-        </div>
+       
 
 
 
 {{!-- if "Delete" button is pressed that is attachted to this mesage, then the message is deleted --}}
-{{#if User.id}}
-        <div class="left-post">
+{{#if canDelete}}
+      
             <form action="/user/message/{{id}}" method="post">
                 <button type="submit">Delete</button>
             </form>
-        </div>
+      
 
 {{else}}
 
 {{/if}}
-
+ </div>
 
 
 

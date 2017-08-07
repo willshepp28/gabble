@@ -120,14 +120,15 @@ button { border: 1px solid black ; }
 
 
 footer {   
- 
-    order: 3;
-    width: 100%;
+      position: fixed;
+width: 100%;
+bottom: 0;
   text-align: center;
   /* Set the fixed height of the footer here */
   height: 60px;
   background-image: linear-gradient(to right, #434343 0%, black 100%); 
   color: white;
 }
+
 
 
