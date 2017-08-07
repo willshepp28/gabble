@@ -73,14 +73,14 @@ router.route('/login')
              req.session.username = username;
              req.session.isAuthenticated = true;
              req.session.userId = user.id;
-             
+             console.log(user);
              
 
         } catch(e) {
             console.log("password and email dont match")
             next();
         }
-       
+        console.log(req.session);
         res.redirect('/user');
     });
 

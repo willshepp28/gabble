@@ -175,13 +175,14 @@ router.route('/message/:id')
         // check in database for all messages
     try {
 
-        var deleteMessage = await models.Message.destroy({ where: { id: messageId, userId: req.session.id } });
+        var deleteMessage = await models.Message.destroy({ where: { id: messageId, userId: req.session.userId } });
         
         
 
     } catch (e) {
         console.log("No messages found");
         next(e);
+
     }
 
     res.redirect('/user');
